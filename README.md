@@ -29,21 +29,21 @@ The dataset contains **200 customer profiles** with features including Age, Gend
 
 We evaluated the clustering models based on **Inertia** (cluster compactness), **Silhouette Score** (cluster separation), and **Execution Speed**:
 
-| Clustering Algorithm | Space | Clusters ($k$) | Inertia | Silhouette Score | Execution Time (s) | Observations |
+| Clustering Algorithm | Space | Clusters (k) | Inertia | Silhouette Score | Execution Time (s) | Observations |
 | :--- | :---: | :---: | :---: | :---: | :---: | :--- |
 | **K-Means (Optimal)** | **PCA-Reduced** | **5** | **222.05** | **0.4115** | **~0.0069s** | **Best cluster separation and structure.** |
 | **K-Means** | Full Scaled | 5 | 332.14 | 0.3222 | ~0.0075s | Good, but higher inertia due to full dimensions. |
 | **MiniBatch K-Means** | PCA-Reduced | 5 | 270.77 | 0.3500 | ~0.0107s | Slightly noisier boundaries; overhead on small data. |
 | **DBSCAN** | PCA-Reduced | 5 | — | 0.2100 | ~0.0063s | Struggled with density variance (12 noise points). |
 
-> **Key Takeaway**: **K-Means ($k=5$) on PCA-reduced data** proved to be the superior pipeline, providing the most distinct customer groups and highest Silhouette Score ($0.4115$).
+> **Key Takeaway**: **K-Means (k=5) on PCA-reduced data** proved to be the superior pipeline, providing the most distinct customer groups and highest Silhouette Score (0.4115).
 
 ---
 
 ## 📈 Key Insights & Business Impact
 
 * **High-Value Target Segment**: Customers with high annual income and high spending scores were clearly segmented, allowing the marketing team to focus VIP loyalty programs on them.
-* **Dimensionality Advantage**: Reducing features via PCA improved the Silhouette Score from $0.3222$ to $0.4115$, proving that removing feature redundancy enhances clustering quality.
+* **Dimensionality Advantage**: Reducing features via PCA improved the Silhouette Score from 0.3222 to 0.4115, proving that removing feature redundancy enhances clustering quality.
 
 ---
 
@@ -53,5 +53,19 @@ We evaluated the clustering models based on **Inertia** (cluster compactness), *
 ```bash
 git clone [https://github.com/ismailhalawa-ctrl/Mall-Customer-Analysis.git](https://github.com/ismailhalawa-ctrl/Mall-Customer-Analysis.git)
 cd Mall-Customer-Analysis
-'''
-ط
+```
+
+2. **Install Dependencies**:
+```bash
+pip install numpy pandas matplotlib scikit-learn
+```
+
+3. **Run the Notebook**:
+Open the Jupyter Notebook or Google Colab file and execute all cells sequentially.
+
+---
+
+## 📄 Dataset
+* **Source**: Mall Customer Segmentation Dataset
+* **Instances**: 200
+* **Features**: `CustomerID`, `Gender`, `Age`, `Annual Income (k$)`, `Spending Score (1-100)`
