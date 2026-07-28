@@ -50,6 +50,6 @@ We evaluated the clustering models based on **Inertia** (cluster compactness), *
 ## 🚀 How to Run
 
 1. **Clone the Repository**:
-   ```bash
-   git clone [https://github.com/ismailhalawa-ctrl/Mall-Customer-Analysis](https://github.com/ismailhalawa-ctrl/Mall-Customer-Analysis.git)
-   cd Mall-Customer-Analysis
+```bash
+git clone [https://github.com/ismailhalawa-ctrl/Mall-Customer-Analysis.git](https://github.com/ismailhalawa-ctrl/Mall-Customer-Analysis.git)
+cd Mall-Customer-Analysis
